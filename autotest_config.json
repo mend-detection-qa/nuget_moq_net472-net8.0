@@ -1,0 +1,168 @@
+{
+  "description": "Autotest configuration file for nuget_moq_net472-net8.0 project - validates Moq testing library across .NET Framework 4.7.2 to .NET 8.0",
+  "version": 1.1,
+  "base_config": {
+    "validate_scan_output": true,
+    "_comment_validate_scan_output": "Whether to validate the scan output/exit code. Options: true | false. Default: true",
+    "scan_output": {
+      "security_scan_report_conclusion": "failure",
+      "_comment_security_scan_report_conclusion": "Expected scan report conclusion. Options: 'success' | 'failure'. This validates the security scan result status.",
+      "total_libs_scanned": {
+        "eq": 104
+      },
+      "_comment_total_libs_scanned": "Expected number of libraries scanned with comparison operator. Validates that the scan processed libraries."
+    },
+    "validate_dependency_tree": true,
+    "_comment_validate_dependency_tree": "Whether to validate the dependency tree. Options: true | false. Default: true",
+    "dependency_tree": {
+      "check_dependency_tree_detection_status": true,
+      "_comment_check_dependency_tree_detection_status": "Whether to check if dependency tree was successfully detected. Options: true | false. Default: true",
+      "expected_total_dependencies_number": {
+        "eq": 153
+      },
+      "expected_direct_dependencies_number": {
+        "eq": 49
+      },
+      "expected_transitive_dependencies_number": {
+        "eq": 104
+      },
+      "_comment_expected_dependencies_number": "Optional. Expected number of dependencies with comparison operator. Operators: gt (>), gte (>=), lt (<), lte (<=), eq (==). If not provided, this check will not be performed.",
+      "direct_dependencies_names_list": {
+        "eq": [
+          "Castle.Core",
+          "EntityFramework",
+          "IFluentInterface",
+          "Microsoft.CodeCoverage",
+          "Microsoft.Extensions.Logging.Abstractions",
+          "Microsoft.NETFramework.ReferenceAssemblies",
+          "Microsoft.NETFramework.ReferenceAssemblies.net461",
+          "Microsoft.TestPlatform.ObjectModel",
+          "Microsoft.TestPlatform.TestHost",
+          "Moq",
+          "Moq.Tests.ComTypes.dll",
+          "Moq.Tests.FSharpTypes",
+          "NuGetizer",
+          "System.Collections.Concurrent",
+          "System.Diagnostics.DiagnosticSource",
+          "System.Diagnostics.EventLog",
+          "System.Globalization.Extensions",
+          "System.IO.FileSystem.Primitives",
+          "System.Linq",
+          "System.Net.Http",
+          "System.Net.Primitives",
+          "System.Reflection.Emit",
+          "System.Runtime.CompilerServices.Unsafe",
+          "System.Security.Cryptography.Cng",
+          "System.Security.Cryptography.Csp",
+          "System.Security.Cryptography.OpenSsl",
+          "System.Text.RegularExpressions",
+          "System.Threading.Tasks.Extensions",
+          "TypeNameFormatter.Sources",
+          "jekyll-relative-links-0.6.1.gem",
+          "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl",
+          "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl",
+          "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl",
+          "runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl",
+          "runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl",
+          "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple",
+          "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl",
+          "runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl",
+          "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl",
+          "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl",
+          "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl",
+          "xunit"
+        ]
+      },
+      "transitive_dependencies_names_list": {
+        "eq": [
+          "Castle.Core",
+          "FSharp.Core",
+          "Microsoft.Bcl.AsyncInterfaces",
+          "Microsoft.Extensions.DependencyInjection.Abstractions",
+          "Microsoft.NETFramework.ReferenceAssemblies.net462",
+          "Microsoft.NETFramework.ReferenceAssemblies.net472",
+          "Microsoft.TestPlatform.ObjectModel",
+          "Newtonsoft.Json",
+          "NuGetizer",
+          "System.Buffers",
+          "System.Collections.Immutable",
+          "System.IO",
+          "System.Memory",
+          "System.Net.Http",
+          "System.Numerics.Vectors",
+          "System.Reflection.Emit.ILGeneration",
+          "System.Reflection.Metadata",
+          "System.Runtime",
+          "System.Runtime.CompilerServices.Unsafe",
+          "System.Runtime.Handles",
+          "System.Runtime.Numerics",
+          "System.Security.Cryptography.Algorithms",
+          "System.Security.Cryptography.Encoding",
+          "System.Security.Cryptography.Primitives",
+          "System.Security.Cryptography.X509Certificates",
+          "System.Security.Principal.Windows",
+          "System.Text.Encoding",
+          "System.Text.RegularExpressions",
+          "System.Threading",
+          "System.Threading.Tasks",
+          "System.Threading.Tasks.Extensions",
+          "addressable-2.8.0.gem",
+          "colorator-1.1.0.gem",
+          "concurrent-ruby-1.1.9.gem",
+          "em-websocket-0.5.2.gem",
+          "eventmachine-1.2.7.gem",
+          "ffi-1.15.3.gem",
+          "forwardable-extended-2.6.0.gem",
+          "http_parser.rb-0.6.0.gem",
+          "i18n-1.8.10.gem",
+          "jekyll-4.2.0.gem",
+          "jekyll-sass-converter-2.1.0.gem",
+          "jekyll-watch-2.2.1.gem",
+          "kramdown-2.3.1.gem",
+          "kramdown-parser-gfm-1.1.0.gem",
+          "liquid-4.0.3.gem",
+          "listen-3.7.0.gem",
+          "mercenary-0.4.0.gem",
+          "pathutil-0.16.2.gem",
+          "public_suffix-4.0.6.gem",
+          "rb-fsevent-0.11.0.gem",
+          "rb-inotify-0.10.1.gem",
+          "rexml-3.2.5.gem",
+          "rouge-3.26.0.gem",
+          "safe_yaml-1.0.5.gem",
+          "sassc-2.4.0.gem",
+          "terminal-table-2.0.0.gem",
+          "unicode-display_width-1.7.0.gem",
+          "xunit",
+          "xunit.abstractions",
+          "xunit.analyzers",
+          "xunit.assert",
+          "xunit.core",
+          "xunit.extensibility.core",
+          "xunit.extensibility.execution"
+        ]
+      },
+      "_comment_dependencies_names_list": "Optional. Check specific libraries in direct dependencies. Operators: eq (==), contains (all items from expected list in actual), in(all items from actual list in expected), nin(actual list does not contain provided libs). If not provided, this check will not be performed.",
+      "validate_agent_versions": true,
+      "expected_agent_version": "",
+      "expected_plugin_version": "",
+      "_comment_agent_versions": "Optional. Expected agent and plugin versions. If not provided, this check will not be performed."
+    },
+    "validate_vulnerabilities_table": true,
+    "_comment_validate_vulnerabilities_table": "Whether to validate the vulnerabilities table. Options: true | false. Default: true",
+    "vulnerabilities_table": {
+      "check_vulnerabilities_table_structure": true,
+      "expected_total_vulnerabilities_number": {
+        "gte": 1
+      },
+      "vulnerabilities_ids_list": {
+        "contains": []
+      },
+      "_comment_ids_names_list": "Optional. Check specific libs ids (WS-2018-0111, CVE-2021-44906). Operators: eq (==), contains (all items from expected list in actual), in(all items from actual list in expected), nin(actual list does not contain provided libs). If not provided, this check will not be performed.",
+      "vulnerabilities_names_list": {
+        "contains": []
+      },
+      "_comment_vulnerabilities_names_list": "Optional. Check specific libs names (minimist-0.0.8.tgz). Operators: eq (==), contains (all items from expected list in actual), in(all items from actual list in expected), nin(actual list does not contain provided libs). If not provided, this check will not be performed."
+    }
+  }
+}
